@@ -1,6 +1,7 @@
 const express = require("express");
-const mongoose = require("mongoose");
+//const _mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+import * as mongoose from "mongoose";
 const app = express();
 const port = 3000;
 app.use(bodyParser.json());
