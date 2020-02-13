@@ -7,7 +7,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
-  res.json("sever is running");
+  res.json("sever is running...");
 });
 
 app.get("/api/getdata", function(req, res) {
