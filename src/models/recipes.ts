@@ -8,19 +8,21 @@ const recipesDetail = new mongoose.Schema(
     },
     time: {
       type: String,
-      required: true
+      required: true,
+      enum: ["breakfast", "snack", "lunch", "dinner"]
     },
     type: {
       type: String,
-      required: true
+      required: true,
+      enum: ["weightloss", "weightgain", "weightmaintain"]
     },
     price: {
-      type: String,
+      type: Number,
       required: true
     }
   },
   { timestamps: true }
 );
 
-const Recipe = mongoose.model("Recipe", recipesDetail);
-module.exports = Recipe;
+const RecipeModel = mongoose.model("Recipe", recipesDetail);
+export default RecipeModel;
