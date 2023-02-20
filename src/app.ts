@@ -6,6 +6,7 @@ import RecipeRoutes from "./routes/routes";
 class App {
   public app: express.Application;
   public routes = new RecipeRoutes();
+  
 
   constructor() {
     this.app = express();
@@ -32,7 +33,7 @@ class App {
         { useUnifiedTopology: true, useNewUrlParser: true }
       )
       .then(() => {
-        console.log("mongo connected successfully");
+        console.log("mongo connected successfully!!!");
       })
 
       .catch(err => {
